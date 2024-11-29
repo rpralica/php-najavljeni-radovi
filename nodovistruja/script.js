@@ -11,11 +11,13 @@ function processText() {
   // Prikaz rezultata u divu
   const outputDiv = document.getElementById('output');
   outputDiv.innerText = result;
+document.getElementById('inputText').focus();
 
   // Kopiranje rezultata u clipboard
   copyToClipboard(result);
   const input = document.getElementById('inputText');
   input.value = '';
+  
 }
 
 function copyToClipboard(text) {
@@ -147,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const searchQuery = inputLine.value.toLowerCase();
     const lines = originalText.split('\n');
     const filteredLines = lines.filter(line =>
-      line.toLowerCase().startsWith(searchQuery)
+      line.toLowerCase().includes(searchQuery)
     );
 
     if (searchQuery === '') {

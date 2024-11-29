@@ -1,3 +1,3 @@
 
 <?php
-$db = mysqli_connect('host', 'user', 'password', 'dbname') or die('Connection error');
+$db = mysqli_connect('localhost', 'root', '', 'najaveradova') or die('Connection error');

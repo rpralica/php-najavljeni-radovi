@@ -25,7 +25,8 @@
   left: 0;
   bottom: 0px;
   opacity: 0;
-  transition: 2.2s;
+  transition: 2.2s; 
+  transition: opacity 0.2s
   pointer-events: none;
 }
 .activs:hover::after {
